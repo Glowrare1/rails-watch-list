@@ -8,3 +8,6 @@ class WatchController < ApplicationController
   # def show
   # end
 end
+
+a book has_many movies lists
+a movie and list belongs to bookmarks
