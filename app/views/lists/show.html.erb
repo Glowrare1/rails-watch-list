@@ -5,8 +5,9 @@
     <h2>Title: <%= bookmark.movie.title %></h2>
     <p>Overview: <%= bookmark.movie.overview %></p>
     <p>Comment: <%= bookmark.comment %></p>
-    <p><%= link_to "Delete movie", list_bookmarks_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
+    <p><%= link_to "Delete movie", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
   <% end %>
 </div>
 
 <%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
+<p><%= link_to 'Remove list', list_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
